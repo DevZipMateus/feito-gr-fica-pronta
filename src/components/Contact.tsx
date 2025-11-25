@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
+import materialsSamples from "@/assets/materials-samples.jpg";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -60,6 +61,14 @@ const Contact = () => {
             Está pronto para transformar suas ideias em realidade? Entre em contato conosco
             e solicite um orçamento
           </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-elegant">
+          <img
+            src={materialsSamples}
+            alt="Amostras de materiais e equipamentos de impressão"
+            className="w-full h-64 object-cover"
+          />
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">

@@ -1,4 +1,6 @@
 import { CheckCircle, Target, Award } from "lucide-react";
+import aboutWorkspace from "@/assets/about-workspace.jpg";
+import processInstallation from "@/assets/process-installation.jpg";
 
 const About = () => {
   const features = [
@@ -33,6 +35,23 @@ const About = () => {
             qualidade, precisão e compromisso, garantindo que o que você idealizou seja
             concretizado de maneira perfeita, com atenção aos detalhes e ao acabamento.
           </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="rounded-xl overflow-hidden shadow-elegant">
+            <img
+              src={aboutWorkspace}
+              alt="Espaço de trabalho da gráfica com equipamentos modernos"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="rounded-xl overflow-hidden shadow-elegant">
+            <img
+              src={processInstallation}
+              alt="Processo de instalação de adesivos em vitrine"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">

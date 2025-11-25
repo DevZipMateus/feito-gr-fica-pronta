@@ -3,7 +3,7 @@ import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Logo e Descrição */}
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="pt-8 border-t border-gray-200 text-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} FEITO Gráfica Rápida. Todos os direitos reservados.</p>
           <p className="mt-1">CNPJ: 60.238.054/0001-11</p>
         </div>

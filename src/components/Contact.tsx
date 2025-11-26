@@ -51,55 +51,55 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contato" className="py-20 bg-secondary/30">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+    <section id="contato" className="py-12 sm:py-16 md:py-20 bg-secondary/30">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Entre em contato
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground">
             Está pronto para transformar suas ideias em realidade? Entre em contato conosco
             e solicite um orçamento
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-12 rounded-xl overflow-hidden shadow-elegant">
+        <div className="max-w-4xl mx-auto mb-8 sm:mb-12 rounded-xl overflow-hidden shadow-elegant">
           <img
             src={materialsSamples}
             alt="Amostras de materiais e equipamentos de impressão"
-            className="w-full h-64 object-cover"
+            className="w-full h-48 sm:h-56 md:h-64 object-cover"
           />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6">Informações de contato</h3>
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 max-w-6xl mx-auto">
+          <div className="space-y-5 sm:space-y-6">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Informações de contato</h3>
             {contactInfo.map((item, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <item.icon className="w-6 h-6 text-primary" />
+              <div key={index} className="flex items-start gap-3 sm:gap-4">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-1">{item.title}</h4>
+                  <h4 className="font-semibold mb-1 text-sm sm:text-base">{item.title}</h4>
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="text-muted-foreground hover:text-primary transition-smooth"
+                      className="text-sm sm:text-base text-muted-foreground hover:text-primary transition-smooth"
                       target={item.href.startsWith("http") ? "_blank" : undefined}
                       rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     >
                       {item.content}
                     </a>
                   ) : (
-                    <p className="text-muted-foreground">{item.content}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">{item.content}</p>
                   )}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="bg-card p-8 rounded-xl shadow-elegant">
-            <h3 className="text-2xl font-bold mb-6">Envie uma mensagem</h3>
+          <div className="bg-card p-6 sm:p-8 rounded-xl shadow-elegant">
+            <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Envie uma mensagem</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <Input
